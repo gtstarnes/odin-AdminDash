@@ -8,14 +8,14 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 10% 20% 20% 20% 30%;
+    grid-template-columns: 10% 80% 10%;
     grid-template-rows: auto;
     grid-template-areas:
-        "sideNav upperNav upperNav upperNav upperNav"
-        "sideNav upperNav upperNav upperNav upperNav"
-        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
-        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
-        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
+        "sideNav upperNav upperNav"
+        "sideNav upperNav upperNav"
+        "sideNav projectPanel sidePanel"
+        "sideNav projectPanel sidePanel"
+        "sideNav projectPanel sidePanel"
 }
 
 /* Navigation Styles */
@@ -62,6 +62,12 @@ main {
 /* Project Panel Styles */
 .projectPanel {
     grid-area: projectPanel;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(3, 30%);
 }
 
 
