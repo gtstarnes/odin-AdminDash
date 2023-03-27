@@ -8,14 +8,15 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
     grid-template-areas:
         "sideNav upperNav upperNav"
         "sideNav upperNav upperNav"
         "sideNav projectPanel sidePanel"
         "sideNav projectPanel sidePanel"
-        "sideNav projectPanel sidePanel"
+        "sideNav projectPanel sidePanel";
+    background-color: beige;
 }
 
 /* Navigation Styles */
@@ -23,20 +24,19 @@ main {
 .upperNav {
     grid-area: upperNav;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    background-color: white; 
+    box-shadow: 0px 2px 2px rgba(0,0,0,.25);
 }
 
 .upperNav > * {
     padding-left: 40px;
+    padding-right: 50px;
 }
 
 .upperNav * {
     display: flex;
     justify-content: space-between;
-}
-
-#lowerTopNav { 
-    box-shadow: 0px 2px 2px rgba(0,0,0,.25);
 }
 
 #search {
@@ -59,21 +59,43 @@ main {
     display: inline-block;
 }
 
+/* Panel Styles */
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,20%);
+}
+
 /* Project Panel Styles */
 .projectPanel {
     grid-area: projectPanel;
+    padding-left: 40px;
 }
 
 #projects {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    grid-template-rows: repeat(3, 30%);
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(3, 42%);
+    row-gap: 30px;
+    column-gap: 30px;   
 }
 
+.project {
 
+    padding: 20px;
+    
+}
+
+.project ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;    
+    margin-bottom: 20px;
+}
 
 /* Side Panel Styles */
 
 .sidePanel {
     grid-area: sidePanel;
+    padding-right: 50px;
 }
