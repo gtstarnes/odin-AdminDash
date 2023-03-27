@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Overall Layout */
+
+main {
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 30%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "sideNav upperNav upperNav upperNav upperNav"
+        "sideNav upperNav upperNav upperNav upperNav"
+        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
+        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
+        "sideNav ProjectPanel ProjectPanel ProjectPanel sidePanel"
+}
+
+/* Navigation Styles */
+/* Upper Nav bars */
+.upperNav {
+    grid-area: upperNav;
+}
+
+/* Side Nav Bar */
+.sideNav {
+    grid-area: sideNav;
+    height: 100vh;
+    background-color: olivedrab;
+}
+
+#dashlogo p {
+    display: inline-block;
+}
+
+/* Project Panel Styles */
+.projectPanel {
+    grid-area: projectPanel;
+}
+
+
+/* Side Panel Styles */
+
+.sidePanel {
+    grid-area: sidePanel;
+}
