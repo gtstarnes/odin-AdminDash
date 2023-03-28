@@ -8,7 +8,8 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 13% 72% 15%;
+    grid-auto-flow: row;
     grid-template-rows: auto;
     grid-template-areas:
         "sideNav upperNav upperNav"
@@ -20,13 +21,20 @@ main {
 }
 
 /* Navigation Styles */
+
 /* Upper Nav bars */
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 .upperNav {
     grid-area: upperNav;
     display: flex;
     flex-direction: column;
     background-color: white; 
-    box-shadow: 0px 2px 2px rgba(0,0,0,.25);
+    box-shadow: 0px 4px 4px rgba(0,0,0,25%);
 }
 
 .upperNav > * {
@@ -55,35 +63,55 @@ main {
     background-color: olivedrab;
 }
 
+.sideNav a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.sideNav li {
+    margin-bottom: 10px;
+}
+
+.sideNav li:hover {
+    transform: scale(1.1);
+}
+
 #dashlogo p {
     display: inline-block;
+}
+
+#upperSideNav {
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 /* Panel Styles */
 .panel {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,20%);
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,20%);
+    
 }
 
 /* Project Panel Styles */
 .projectPanel {
     grid-area: projectPanel;
     padding-left: 40px;
+    padding-top: 20px;
 }
 
 #projects {
     display: grid;
-    grid-template-columns: repeat(2, 45%);
-    grid-template-rows: repeat(3, 42%);
-    row-gap: 30px;
-    column-gap: 30px;   
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: repeat(2, 51%);
+    gap: 2rem;   
+    align-content: center;
+    margin-top: 50px;
 }
 
 .project {
-
-    padding: 20px;
-    
+    background-image: linear-gradient(to right, rgb(251, 203, 113), 20%, white);
+    padding: 20px;    
 }
 
 .project ul {
@@ -93,9 +121,74 @@ main {
     margin-bottom: 20px;
 }
 
+.project:hover{
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,30%);
+}
+
 /* Side Panel Styles */
 
 .sidePanel {
     grid-area: sidePanel;
     padding-right: 50px;
+    padding-top: 20px;
+}
+
+.announcements {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement {
+    width: 100%;
+}
+
+.announcement p {
+    font-size: .75rem;
+    margin-top: -12px;
+}
+
+#announceMid {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey
+}
+
+.announcement:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.announcement:first-of-type:hover{
+    border-bottom: 1px solid rgba(0,0,0,25%)
+}
+
+.announcement:last-of-type:hover {
+    border-top: 1px solid rgba(0,0,0,25%);
+}
+
+/* Trending Styles */
+#trending {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.person {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.personInfo {
+    margin-left: 10px;
+}
+
+.handle {
+    font-weight: bold;
+    margin-bottom: -12px;
 }
