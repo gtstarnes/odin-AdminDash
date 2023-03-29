@@ -44,6 +44,7 @@ a {
 .upperNav > * {
     padding-left: 40px;
     padding-right: 50px;
+    height: auto;
 }
 
 .upperNav * {
@@ -52,11 +53,22 @@ a {
 }
 
 
+
 #navLogo1 {
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 30%;
 }
+
+#navLogo1 svg {
+    width: 60px;
+    height: auto;
+}
+
+#navLogo1 svg path {
+    fill: olivedrab;
+}
+
 
 .searchBar {
     justify-content: flex-start;
@@ -92,10 +104,20 @@ a {
     gap: 10px;
 }
 
+#navLogo2 svg{
+    max-width: 60px;
+    height: auto;
+}
+
+#navLogo2 svg path {
+    fill: orange;
+}
+
 .lowerNav ul {
     align-items: center;
-    gap: 50px;
-    margin-right: 20px;
+    gap: 40px;
+    margin-right: 30px;
+    font-size: 1.1rem;
 }
 
 .lowerNav li:hover {
@@ -190,15 +212,31 @@ a {
 }
 
 .project p {
-    width: 80%;
+    width: 90%;
 }
-
 .project ul {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-    margin-bottom: 20px;
+    width: 97%;
 }
+
+.project li {
+    width: 15%;
+}
+
+.project svg {
+    max-width: 30px;
+    height: auto;
+}
+
+.project svg path {
+    fill: black;
+}
+
+.project svg:hover {
+    transform:scale(1.1);
+}
+
 
 .project:hover{
     box-shadow: 2px 2px 3px 2px rgba(0,0,0,30%);
@@ -260,6 +298,11 @@ a {
 .person {
     display: flex;
     width: 100%;
+}
+
+.person svg {
+    max-width: 50px;
+    height: auto;
 }
 
 .personInfo {
