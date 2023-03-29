@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Delicious+Handrawn&display=swap');
+
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
@@ -29,12 +31,14 @@ li {
 a {
     text-decoration: none;
 }
+
 .upperNav {
     grid-area: upperNav;
     display: flex;
     flex-direction: column;
     background-color: white; 
     box-shadow: 0px 4px 4px rgba(0,0,0,25%);
+    justify-content: space-between;
 }
 
 .upperNav > * {
@@ -47,8 +51,30 @@ a {
     justify-content: space-between;
 }
 
+
+#navLogo1 {
+    display:flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.searchBar {
+    justify-content: flex-start;
+    width: 60%;
+}
+.searchBar svg {
+    max-width: 30px;
+    max-height: auto;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+.searchBar svg path {
+    fill: gray;
+}
+
 #search {
-    width: 40%;
+    width: 90%;
     height: 30px;
     margin-top: 20px;
     background-color: lightgrey;
@@ -56,11 +82,34 @@ a {
     border: none;
 }
 
+#search:focus {
+    outline: none !important;
+    border: 2px solid olivedrab;
+    padding-left: 20px;
+}
+
+#navLogo2 {
+    gap: 10px;
+}
+
+.lowerNav ul {
+    align-items: center;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+.lowerNav li:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+
 /* Side Nav Bar */
 .sideNav {
     grid-area: sideNav;
     height: 100vh;
     background-color: olivedrab;
+    color: white;
 }
 
 .sideNav a {
@@ -76,12 +125,35 @@ a {
     transform: scale(1.1);
 }
 
+.sideNav svg {
+    max-width: 30px;
+    height: auto;
+    margin-right: 10px;
+    transform: translate(2px, 6px);
+}
+
+.sideNav svg path {
+    fill: white;
+}
+
+#dashlogo {
+    margin-left: 20px;
+}
+
+#dashlogo svg {
+    max-width: 60px;
+    height: auto;
+}
 #dashlogo p {
+    font-family: 'Alkatra', cursive;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 2rem;
     display: inline-block;
+    
 }
 
 #upperSideNav {
-    margin-top: 40px;
+    margin-top: 5px;
     margin-bottom: 50px;
 }
 
@@ -110,14 +182,21 @@ a {
 }
 
 .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: linear-gradient(to right, rgb(251, 203, 113), 20%, white);
-    padding: 20px;    
+    padding: 10px 20px;    
+}
+
+.project p {
+    width: 80%;
 }
 
 .project ul {
     display: flex;
     justify-content: flex-end;
-    align-items: end;    
+    gap: 10px;
     margin-bottom: 20px;
 }
 
@@ -180,7 +259,6 @@ a {
 }
 .person {
     display: flex;
-    border: 1px solid black;
     width: 100%;
 }
 
